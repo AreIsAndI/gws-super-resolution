@@ -11,7 +11,7 @@ This repository was made by team GWS! to complete the final project challenge fr
 | Muhammad Irfan Arisani | Universitas Dian Nuswantoro | arisaniirfan@gmail.com | [link](https://www.linkedin.com/in/muhammad-irfan-arisani-224068228/) | Project Leader |
 | Rahma Absoh Dwiyanti | Universitas Sains Al-Qur'an | rahmaabsoh13@gmail.com | [link](https://www.linkedin.com/in/rahma-absoh-dwiyanti-13a50625b/) | Project Assistant |
 | Jemi Arya Dwi Purnama | Universitas Singaperbangsa Karawang | slaydonejemi22@gmail.com | [link](https://www.linkedin.com/in/jemi-arya-dwi-purnama-293535244/) | Model Trainer 1 |
-| Septia Mulya Ulfa | Universitas Malikussaleh | septiamulya09@gmail.com | https://www.linkedin.com/in/septia-mulya-ulfa-3b6677292 | Model Trainer 2 |
+| Septia Mulya Ulfa | Universitas Malikussaleh | septiamulya09@gmail.com | [link](https://www.linkedin.com/in/septia-mulya-ulfa-3b6677292) | Model Trainer 2 |
 | Yudha Nugraha | Universitas Lampung | yudhanugraha.cr7@gmail.com | [link](https://www.linkedin.com/in/yudha-nugraha-42b7191a2/) | Deployment 1 |
 | Elang Anggri Sakti Hartanto | Universitas Gunadarma | Aguiladelaira@gmail.com | [link](https://www.linkedin.com/in/elang-anggri-sakti-hartanto-387333292/) | Deployment 2 |
 
@@ -25,7 +25,8 @@ By the time this project was created, the following installed libraries and thei
 - torchvision == 0.16.1
 
 ### Environment
-This project has been tested in the following local machine specifications, any of those which better than this should give a better experience:
+This project has been tested in the following local machine specifications, any of those which better than this should give a better experience.
+|||
 | --- | --- |
 | CPU | Intel i3-1215U |
 | GPU | Integrated UHD Graphics |
@@ -34,7 +35,7 @@ This project has been tested in the following local machine specifications, any 
 | OS | Windows 11 |
 
 ## Dataset
-In this experiment, we are using Celeba datasets. The following datasets link can be found in Kaggle, but the other links will do:
+In this experiment, we are using Celeba datasets. The following datasets link can be found in Kaggle, but the other links will do.
 - [Celeba](https://www.kaggle.com/datasets/jessicali9530/celeba-dataset)
 - [Celeba HQ](https://www.kaggle.com/datasets/ipythonx/celebamaskhq)
 
@@ -44,10 +45,13 @@ In this section, the base and modified version of Super-Resolution GAN will be s
 
 #### 1. Data Benchmark
 We used the following 10 custom images to measure all of the model performance.
-
+![](assets/data-test.png)
 
 #### 2. Metrics
-There are two main metrics for this GAN experiment, the average value of Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index (SSIM). The following score and several hyperparameter settings will be shown in the table below:
+There are two main metrics for this GAN experiment, the average value of Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index (SSIM).
+![](assets/avg-psnr-ssim.png)
+
+The following score and several hyperparameter settings will be shown in the table below:
 | model | iterations | optimizer | learning_rate | beta_1 | beta_2 | batch_size (train/test) | avg_psnr | avg_ssim |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | base_srgan | 4500 | Adam | 0.00008 | 0.5 | 0.999 | 16/8 | 28.333 | **0.687** |
@@ -55,7 +59,10 @@ There are two main metrics for this GAN experiment, the average value of Peak Si
 | final_modified_srgan | 12000 | Adam | 0.00008 | 0.475 | 0.999 | 14/7 | **28.703** | 0.676 |
 
 #### 3. Ablation Study
-There is a simple minor modification, and that is the reduction number of residual networks in the generator architecture from 16 to 14. This is because we are focusing on **efficiency** which can lead to faster execution time and smaller memory, but also resulting in identical performance. We also show one of the best PSNR values and SSIM scores from generated images for each model in the table below:
+There is a simple minor modification, and that is the reduction number of residual networks in the generator architecture from 16 to 14.
+![](assets/gen-architecture.png)
+
+This is because we are focusing on **efficiency** which can lead to faster execution time and smaller memory, but also resulting in identical performance. We also show one of the best PSNR values and SSIM scores from generated images for each model in the table below:
 | model | n_residual_network | top_psnr | top_ssim |
 | --- | --- | --- | --- |
 | base_srgan | 16 | 28.95 | 0.806 |
@@ -64,9 +71,15 @@ There is a simple minor modification, and that is the reduction number of residu
 
 #### 4. Training/Validation Curve
 Below are the visualizations of the generator and discriminator loss history for each number of iterations.
- 
+![](assets/gen-disc-losses.png)
+
 ### Testing
-Below are the comparisons of each model to generate high-resolution images.
+Below are the visualizations of the PSNR values and SSIM scores for each generated image using different types of models.
+![](assets/each-psnr-ssim.png)
+
+We also show the comparisons of each model to generate high-resolution images.
+![](assets/image-compare-1.png)
+![](assets/image-compare-2.png)
 
 ### Deployment
 You can clone this repository and run the virtual environment from the `gws-deployment` folder. Remember to install the required package before running this project!
