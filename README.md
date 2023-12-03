@@ -1,11 +1,12 @@
 # DIGITAL IMAGE RESOLUTION ENHANCEMENT IN SECURITY FEATURE
-An alternative title of 'Peningkatan Resoulsi Citra Digital pada Fitur Keamanan'
+An alternative title of 'Peningkatan Resolusi Citra Digital pada Fitur Keamanan'
 
 ## Project Description
-This repository was made by team GWS! to complete the final project challenge from Startup Campus. In this project, we propose a modified Super-Resolution Generative Adversarial Network (SRGAN) for CCTV system use. To use this project, you may want to install some specific libraries version in your local machine. Also to note that the uploaded project is using a virtual environment.
+This repository was made by team GWS! to complete the final project challenge from Startup Campus. In this project, we propose a modified Super-Resolution Generative Adversarial Network (SRGAN) for CCTV system use. To use this project, you may want to install some specific library versions on your local machine. Also, note that the uploaded project is using a virtual environment.
 
 ## Contributor
 | Full Name | Affiliation | Email | LinkedIn | Role |
+| --- | --- | --- | --- | --- |
 | Nicholas Dominic | Startup Campus, AI Track | nic.dominic@icloud.com | [link](https://linkedin.com/in/nicholas-dominic) | Supervisor |
 | Muhammad Irfan Arisani | Universitas Dian Nuswantoro | arisaniirfan@gmail.com | [link](https://www.linkedin.com/in/muhammad-irfan-arisani-224068228/) | Project Leader |
 | Rahma Absoh Dwiyanti | Universitas Sains Al-Qur'an | rahmaabsoh13@gmail.com | [link](https://www.linkedin.com/in/rahma-absoh-dwiyanti-13a50625b/) | Project Assistant |
@@ -16,7 +17,7 @@ This repository was made by team GWS! to complete the final project challenge fr
 
 ## Setup
 ### Prerequisite Packages (Dependencies)
-By the time this project was created, the following installed libraries and its version will be:
+By the time this project was created, the following installed libraries and their versions will be:
 - python == 3.10.0
 - streamlit == 1.28.2
 - [streamlit-cropper](https://github.com/turner-anderson/streamlit-cropper)
@@ -24,7 +25,8 @@ By the time this project was created, the following installed libraries and its 
 - torchvision == 0.16.1
 
 ### Environment
-This project has been tested in the following local machine specification, any of those which better than this should be give a better experience:
+This project has been tested in the following local machine specifications, any of those which better than this should give a better experience:
+| --- | --- |
 | CPU | Intel i3-1215U |
 | GPU | Integrated UHD Graphics |
 | ROM | 1 TB SSD |
@@ -38,7 +40,7 @@ In this experiment, we are using Celeba datasets. The following datasets link ca
 
 ## Results
 ### Model Performance
-In this section, the base and modified version of Super Resolution GAN will be shown below.
+In this section, the base and modified version of Super-Resolution GAN will be shown below.
 
 #### 1. Data Benchmark
 We used the following 10 custom images to measure all of the model performance.
@@ -47,25 +49,27 @@ We used the following 10 custom images to measure all of the model performance.
 #### 2. Metrics
 There are two main metrics for this GAN experiment, the average value of Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index (SSIM). The following score and several hyperparameter settings will be shown in the table below:
 | model | iterations | optimizer | learning_rate | beta_1 | beta_2 | batch_size (train/test) | avg_psnr | avg_ssim |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | base_srgan | 4500 | Adam | 0.00008 | 0.5 | 0.999 | 16/8 | 28.333 | **0.687** |
 | modified_srgan | 4500 | Adam | 0.00008 | 0.49 | 0.999 | 14/7 | 28.343 | 0.678 |
 | final_modified_srgan | 12000 | Adam | 0.00008 | 0.475 | 0.999 | 14/7 | **28.703** | 0.676 |
 
 #### 3. Ablation Study
-There is a simple minor modification, and that is the reduction number of residual network in generator architecture from 16 to 14. This is because we are focusing on **efficiency** which can lead to faster execution time and smaller memory, but also resulting in identical performance. We also shown one of the best PSNR value and SSIM score from generated image for each model in table below: 
+There is a simple minor modification, and that is the reduction number of residual networks in the generator architecture from 16 to 14. This is because we are focusing on **efficiency** which can lead to faster execution time and smaller memory, but also resulting in identical performance. We also show one of the best PSNR values and SSIM scores from generated images for each model in the table below:
 | model | n_residual_network | top_psnr | top_ssim |
+| --- | --- | --- | --- |
 | base_srgan | 16 | 28.95 | 0.806 |
 | modified_srgan | 14 | 29.072 | 0.805 |
 | final_modified_srgan | 14 | **29.619** | **0.807** |
 
 #### 4. Training/Validation Curve
-Below are shown the visualization of generator and discriminator losses history for each number of iterations.
+Below are the visualizations of the generator and discriminator loss history for each number of iterations.
  
 ### Testing
-Below are shown the comparison of each model to generate high resolution images.
+Below are the comparisons of each model to generate high-resolution images.
 
 ### Deployment
-You can clone this repository and run the virtual environtment from `gws-deployment` folder. Remember to install the required package before run this project!
+You can clone this repository and run the virtual environment from the `gws-deployment` folder. Remember to install the required package before running this project!
 
 ## Supporting Documents
 - [Base Notebook](https://www.kaggle.com/code/balraj98/single-image-super-resolution-gan-srgan-pytorch)
