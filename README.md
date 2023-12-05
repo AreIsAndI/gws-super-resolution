@@ -2,6 +2,7 @@
 An alternative title of 'Peningkatan Resolusi Citra Digital pada Fitur Keamanan'
 
 ## Project Description
+![](assets/overview.png)
 This repository was made by team GWS! to complete the final project challenge from Startup Campus. In this project, we propose a modified Super-Resolution Generative Adversarial Network (SRGAN) for CCTV system use. To use this project, you may want to install some specific library versions on your local machine. Also, note that the uploaded project is using a virtual environment.
 
 ## Contributor
