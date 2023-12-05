@@ -35,6 +35,7 @@ This project has been tested in the following local machine specifications, any 
 | OS | Windows 11 |
 
 ## Dataset
+![](https://mmlab.ie.cuhk.edu.hk/projects/CelebA/intro.png)
 In this experiment, we are using Celeba datasets. The following datasets link can be found in Kaggle, but the other links will do.
 - [Celeba](https://www.kaggle.com/datasets/jessicali9530/celeba-dataset)
 - [Celeba HQ](https://www.kaggle.com/datasets/ipythonx/celebamaskhq)
