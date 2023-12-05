@@ -1,4 +1,4 @@
-# DIGITAL IMAGE RESOLUTION ENHANCEMENT IN SECURITY FEATURE
+# Digital Image Resolution Enhancement in Security Feature
 An alternative title of 'Peningkatan Resolusi Citra Digital pada Fitur Keamanan'
 
 ## Project Description
