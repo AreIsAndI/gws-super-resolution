@@ -3,7 +3,7 @@ An alternative title of 'Peningkatan Resolusi Citra Digital pada Fitur Keamanan'
 
 ## Project Description
 ![](assets/overview.png)
-This repository was made by team GWS! to complete the final project challenge from Startup Campus. In this project, we propose a modified Super-Resolution Generative Adversarial Network (SRGAN) for CCTV system use. To use this project, you may want to install some specific library versions on your local machine. Also, note that the uploaded project is using a virtual environment.
+This repository was made by team GWS! to complete the final project challenge from Startup Campus. In this project, we propose a modified Super-Resolution Generative Adversarial Network (SRGAN) for CCTV system use. To use this project, you may want to install some specific library versions on your local machine.
 
 ## Contributor
 | Full Name | Affiliation | Email | LinkedIn | Role |
@@ -84,7 +84,10 @@ We also show the comparisons of each model to generate high-resolution images.
 ![](assets/image-compare-2.png)
 
 ### Deployment
-You can clone this repository and run the virtual environment from the `gws-deployment` folder. Remember to install the required package before running this project!
+There are several steps to use this project:
+1. Install the required libraries, you can go to the `Prerequisite Packages (Dependencies)` section above.
+2. Clone this repository to your local machine, and locate your path directory to `gws-deployment` folder.
+3. Open CMD in that directory, and type `streamlit run app.py` command.
 
 ## Supporting Documents
 - [Base Notebook](https://www.kaggle.com/code/balraj98/single-image-super-resolution-gan-srgan-pytorch)
