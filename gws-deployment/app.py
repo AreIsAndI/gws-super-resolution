@@ -8,7 +8,7 @@ def genImg(pilImage):
     # load pretrained generator
     generator = GeneratorResNet()
     generator.eval()
-    generator.load_state_dict(torch.load("Include/generator.pth",
+    generator.load_state_dict(torch.load("gws-deployment/Include/generator.pth",
                                         map_location=torch.device('cpu')))
 
     # do several configuration
